@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loveicon,因爱而动</title>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/thx/cube/1.0.3/neat.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="runtime.js"></script>
+    <script src="loveicon.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="banner">
+            <h1>
+                <span class="love">❤</span>Loveicon</h1>
+            <blockquote>
+                <p>"Loveicon，因爱而动"</p>
+            </blockquote>
+            <p>Loveicon 是一个开源的 SVG 动画图标库</p>
+        </div>
+        <div class="icon">
+            <ul class="icon-list">
+                <li>
+                    <div id="loveicon1" class="loveicon"></div>
+                </li>
+                <li>
+                    <div id="loveicon2" class="loveicon"></div>
+                </li>
+                <li>
+                    <div id="loveicon3" class="loveicon"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer" class="">
+        <p>
+            <small>
+                Copyright © 2013，<a href="#" target="_blank">一丝</a>
+            </small>
+        </p>
+        <p>
+            基于<a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a>开源协议
+        </p>
+    </div>
+    <script>
+    var stage = new swiffy.Stage(document.getElementById('loveicon1'), loveicon1);
+    stage.start();
+
+    var stage = new swiffy.Stage(document.getElementById('loveicon2'), loveicon2);
+    stage.start();
+
+    var stage = new swiffy.Stage(document.getElementById('loveicon3'), loveicon3);
+    stage.start();
+    </script>
+</body>
+
+</html>

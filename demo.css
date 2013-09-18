@@ -1,0 +1,74 @@
+a {
+    color:#CF4C22;
+}
+.main {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon {
+    font-size: 0;
+    text-align: center;
+}
+.icon-list li {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    vertical-align: middle;
+    text-align: center;
+}
+.loveicon {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.loveicon:hover {
+    width: 300px;
+    height: 300px;
+}
+.banner {
+    text-align: center;
+}
+.banner h1 {
+    position: relative;
+    font-size: 86px;
+    color:#E74C27;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px -2px 3px rgba(0, 0, 0, .5);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.banner h1:hover {
+    cursor: pointer;
+    text-shadow: -2px 2px 4px rgba(0, 0, 0, .6);
+}
+.banner p {
+    font-size: 36px;
+    color:#666;
+}
+.banner blockquote p {
+    color:#CF4C22;
+}
+#footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    text-align: center;
+    border-top: 1px solid #E5E5E5;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
