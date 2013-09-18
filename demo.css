@@ -1,5 +1,12 @@
+body{
+    font-size: 14px;
+}
 a {
     color:#CF4C22;
+}
+a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid;
 }
 .main {
     width: 990px;
@@ -71,4 +78,15 @@ a {
     background-color: white;
     position: relative;
     z-index: 1;
+}
+
+#footer .info{
+    overflow: hidden;
+    display: inline-block;
+}
+
+#footer .info a{
+    padding:0 8px;
+    border-left: 1px solid #CCC;
+    margin-left: -1px;
 }
