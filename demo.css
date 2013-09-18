@@ -72,7 +72,7 @@ a:hover{
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 300px;
+    margin-top: 100px;
     text-align: center;
     border-top: 1px solid #E5E5E5;
     background-color: white;
@@ -89,4 +89,19 @@ a:hover{
     padding:0 8px;
     border-left: 1px solid #CCC;
     margin-left: -1px;
+}
+
+/* 二维码 */
+.dimensional{
+    text-align: center;
+    color:#666;
+}
+
+.dimensional h2{
+    font-weight: normal;
+}
+
+.dimensional img{
+    display: block;
+    margin: 20px auto;
 }
