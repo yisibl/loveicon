@@ -1,5 +1,6 @@
 body{
     font-size: 14px;
+    background:#FFF2F2;
 }
 a {
     color:#CF4C22;
@@ -25,6 +26,12 @@ a:hover{
     vertical-align: middle;
     text-align: center;
 }
+
+/* SVG背景透明 */
+.loveicon div{
+    background-color: transparent !important;
+}
+
 .loveicon {
     width: 160px;
     height: 160px;
