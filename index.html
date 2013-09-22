@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="">
         <div class="banner">
             <h1>
                 <span class="love">❤</span>Loveicon</h1>
@@ -21,7 +21,7 @@
             </blockquote>
             <p>Loveicon 是一个 SVG 动画图标库</p>
         </div>
-        <div class="icon">
+        <div class="icon-demo icon-nromal">
             <ul class="icon-list">
                 <li>
                     <div id="loveicon1" class="loveicon"></div>
@@ -34,17 +34,48 @@
                 </li>
             </ul>
         </div>
-        <div class="dimensional">
-          <h2>试试用手机效果吧！</h2>
-          <p>支持：iOS Safari 5+，Android 4.0.3+</p>
-          <img src="http://cli.im/qr/1968639?WoW5y" alt="二维码">
+
+        <div class="icon-demo icon-click">
+            <h2>控制动画播放</h2>
+            <h3>按钮控制，图标上点击时停止动画</h3>
+            <div class="button-bar">
+                <button type="button" class="btn btn-large" onClick="containerClick.runtimeStage.play();" /><b class="icons"><svg width="16" height="16" data-tags="play, media control, audio"><path d="M 96.00,64.00L 416.00,256.00L 96.00,448.00 z" transform="scale(0.03125 0.03125)"></path></svg></b>播放</button>
+                <button type="button" class="btn btn-large" onClick="containerClick.runtimeStage.stop();" /><b class="icons"><svg width="16" height="16" data-tags="play, media control, audio"><path d="M 64.00,64.00L 224.00,64.00L 224.00,448.00L 64.00,448.00zM 288.00,64.00L 448.00,64.00L 448.00,448.00L 288.00,448.00z" transform="scale(0.03125 0.03125)"></path></svg></b>暂停</button>
+                <button type="button" class="btn btn-large" onClick="containerClick.runtimeStage._root.gotoAndStop('begin');" /><b class="icons"><svg width="16" height="16" data-tags="play, media control, audio"><path d="M 64.00,64.00L 448.00,64.00L 448.00,448.00L 64.00,448.00z" transform="scale(0.03125 0.03125)"></path></svg></b>停止</button>
+                <button type="button" class="btn btn-large" onClick="containerClick.runtimeStage.prevFrame();" /><b class="icons"><svg width="16" height="16" data-tags="play, media control, audio"><path d="M 288.00,80.00 L 288.00,240.00 L 448.00,80.00 L 448.00,432.00 L 288.00,272.00 L 288.00,432.00 L 112.00,256.00 Z" transform="scale(0.03125 0.03125)"></path></svg></b>上一帧</button>
+                <button type="button" class="btn btn-large" onClick="containerClick.runtimeStage.nextFrame();" />下一帧<b class="icons"><svg width="16" height="16" data-tags="play, media control, audio"><path d="M 256.00,432.00 L 256.00,272.00 L 96.00,432.00 L 96.00,80.00 L 256.00,240.00 L 256.00,80.00 L 432.00,256.00 Z" transform="scale(0.03125 0.03125)"></path></svg></b>
+                </button>
+            </div>
+            <ul class="icon-list">
+                <li>
+                    <div id="loveicon4" class="loveicon"></div>
+                </li>
+            </ul>
         </div>
+
+         <div class="icon-demo icon-hover">
+            <h3>鼠标 Hover 时播放，离开暂停</h3>
+            <ul class="icon-list">
+                <li>
+                    <div id="loveicon5" class="loveicon"></div>
+                </li>
+            </ul>
+         </div>
+
+    <div class="dimensional">
+        <h2>试试用手机效果吧！</h2>
+        <p>支持：iOS Safari 5+，Android 4.0.3+</p>
+        <img src="http://cli.im/qr/1968639?WoW5y" alt="二维码">
+    </div>
+    </div>
+
+
     </div>
     <div id="footer">
         <p class="info">
-          <a href="https://github.com/yisibl/loveicon" target="_blank">Github</a>
-          <a href="https://github.com/yisibl/loveicon/zipball/master" target="_blank">下载 .zip</a>
-          <a href="https://github.com/yisibl/loveicon/tarball/master" target="_blank">下载 .tar.gz </a>
+            <a href="https://github.com/yisibl/loveicon" target="_blank">Github</a>
+            <a href="https://github.com/yisibl/loveicon/zipball/master" target="_blank">下载 .zip</a>
+            <a href="https://github.com/yisibl/loveicon/tarball/master" target="_blank">下载 .tar.gz </a>
         </p>
         <p>
             <small>
@@ -56,14 +87,44 @@
         </p>
     </div>
     <script>
-    var stage = new swiffy.Stage(document.getElementById('loveicon1'), loveicon1);
+    var container = document.getElementById('loveicon1');
+    container.window = window;
+    var stage = new swiffy.Stage(container, loveicon1);
     stage.start();
 
-    var stage = new swiffy.Stage(document.getElementById('loveicon2'), loveicon2);
+    var container = document.getElementById('loveicon2');
+    container.window = window;
+    var stage = new swiffy.Stage(container, loveicon2);
     stage.start();
 
-    var stage = new swiffy.Stage(document.getElementById('loveicon3'), loveicon3);
+    var container = document.getElementById('loveicon3');
+    container.window = window;
+    var stage = new swiffy.Stage(container, loveicon3);
     stage.start();
+
+    var containerClick = document.getElementById('loveicon4');
+    containerClick.window = window;
+    var stage = new swiffy.Stage(containerClick, loveicon1);
+    stage.start();
+
+    containerClick.addEventListener('click', function() {
+        containerClick.runtimeStage._root.gotoAndStop('begin');
+    })
+
+    var containerHover = document.getElementById('loveicon5');
+    containerHover.window = window;
+    var stage = new swiffy.Stage(containerHover, loveicon3);
+    stage.start();
+
+    window.onload = function(){
+      containerHover.runtimeStage.stop();
+    }
+    containerHover.addEventListener('mouseover', function() { 
+        containerHover.runtimeStage.play();
+    })
+    containerHover.addEventListener('mouseout', function() {
+        containerHover.runtimeStage.stop();
+    })
     </script>
 </body>
 
