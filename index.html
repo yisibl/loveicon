@@ -15,7 +15,7 @@
     <div class="">
         <div class="banner">
             <h1>
-                <span class="love">❤</span>Loveicon</h1>
+            L<span class="heart">♡</span>veicon</h1>
             <blockquote>
                 <p>"Loveicon，因爱而动"</p>
             </blockquote>
@@ -59,6 +59,15 @@
             <ul class="icon-list">
                 <li>
                     <div id="loveicon5" class="loveicon"></div>
+                </li>
+            </ul>
+         </div>
+
+        <div class="icon-demo icon-hover">
+            <h3>鼠标 Hover 时播放，离开停止</h3>
+            <ul class="icon-list">
+                <li>
+                    <div id="loveiconClose" class="loveicon"></div>
                 </li>
             </ul>
          </div>
@@ -125,6 +134,30 @@
     })
     containerHover.addEventListener('mouseout', function() {
         containerHover.runtimeStage.stop();
+    })
+
+
+// 关闭图标
+    var containerClose = document.getElementById('loveiconClose');
+    containerClose.window = window;
+    var stage = new swiffy.Stage(containerClose, loveiconClose);
+    stage.start();
+
+    containerClose.addEventListener('mouseover', function() { 
+        containerClose.runtimeStage._root.gotoAndStop(6);
+    })
+
+    containerClose.addEventListener('mouseout', function() {
+        containerClose.runtimeStage._root.gotoAndStop('close');
+    })
+//test 控制循环播放次数
+    var testcontainer = document.getElementById('test');
+    testcontainer.window = window;
+    var stage = new swiffy.Stage(testcontainer, test);
+    stage.start();
+    testcontainer.addEventListener('mouseover', function() {
+        console.log(testcontainer);
+        testcontainer.runtimeStage.loopPlay(6);
     })
     </script>
 </body>
